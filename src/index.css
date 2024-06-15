@@ -45,9 +45,20 @@ div.logo {
 
 div.page-header nav {
   display: grid;
-  grid-template-columns: 150px 1fr 100px;
+  grid-template-columns:  150px 1fr;
   padding: 15px 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div.page-header nav .nav-right-content {
+  display: none;
+}
+
+div.page-header nav div:last-child {
+  margin-left: auto;
+  font-size: 24px;
+  color: var(--base-color);
+  cursor: pointer;
 }
 
 div.page-header nav div.page-links {
@@ -60,7 +71,7 @@ div.page-header nav div.page-links {
     text-decoration: none;
     display: inline-block;
     padding: 5px 10px;
-    /* background-color: gainsboro; */
+
     color: var(--base-color);
     border-radius: 5px 0px;
   }
@@ -130,9 +141,13 @@ section.homepage-intro {
   justify-content: center;
   flex-direction: column;
 
+  h1 {
+    margin-bottom: 10px;
+  }
+
   h1,
   p {
-    margin: 0 auto;
+    text-align: center;
   }
 
   h1 {
@@ -144,13 +159,22 @@ section.homepage-intro {
 div.become-a-teacher {
   margin: 50px 0;
   display: flex;
-  gap: 40px;
+  flex-direction: column;
   background-color: #fff5f3;
   border-radius: 10px;
   overflow: hidden;
 
   section img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  section:last-child {
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   section h1 {
@@ -162,11 +186,14 @@ div.become-a-teacher {
 
   section p {
     font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   section button {
+    width: 300px;
     padding: 15px 45px;
-    margin: 40px 0;
+    margin: 40px auto;
     background-color: var(--base-color);
     border: none;
     color: #fff;
@@ -484,8 +511,8 @@ div.footer-container {
 
 div.footer-container > div:first-child {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 40px;
 }
 
 div.footer-container > div:last-child {
@@ -510,4 +537,32 @@ div.footer-container ul li a {
 div.footer-container ul li a:hover {
   background-color: rgba(255, 55, 65, 0.5);
   transition: background-color 1s ease;
+}
+
+div.copyright {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 900px) {
+  div.footer-container > div:first-child {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.page-header nav .nav-right-content {
+    display: block;
+  }
+
+  div.page-header nav div:last-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  div.become-a-teacher {
+    flex-direction: row;
+  }
+
+  div.become-a-teacher section {
+    flex: 1; 
+  }
 }

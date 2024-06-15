@@ -10,11 +10,11 @@ const Banner = () => {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         slidesPerView={1}
       >
-        <SwiperSlide className="slide1">Slide 1</SwiperSlide>
-        <SwiperSlide className="slide2">Slide 2</SwiperSlide>
-        <SwiperSlide className="slide3">Slide 3</SwiperSlide>
-        <SwiperSlide className="slide4">Slide 4</SwiperSlide>
-        <SwiperSlide className="slide5">Slide 5</SwiperSlide>
+        <SwiperSlide className="slide1"></SwiperSlide>
+        <SwiperSlide className="slide2"></SwiperSlide>
+        <SwiperSlide className="slide3"></SwiperSlide>
+        <SwiperSlide className="slide4"></SwiperSlide>
+        <SwiperSlide className="slide5"></SwiperSlide>
       </Swiper>
     </div>
   );

@@ -71,7 +71,7 @@ const Footer = () => {
         </section>
       </div>
       <div className="copyright">
-        &copy; Horla Adjornor | All rights reserved | Designed by: Promax Gh
+        &copy; Ebirim Blessing | All rights reserved | Designed by: Ebirim Blessing.
       </div>
     </div>
   );
