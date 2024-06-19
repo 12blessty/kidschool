@@ -78,11 +78,31 @@ div.navlink.mobile > div {
     margin-left: 20px;
     margin-top: 40px;
   }
+
+  animation: hideNavMenu 0.5s ease-in forwards;
 }
 
 div.navlink.mobile.active > div {
   right: 0;
   animation: showNavMenu 0.5s ease-in forwards;
+}
+
+@keyframes hideNavMenu {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -200px;
+  }
+}
+
+@keyframes ShowNavMenu {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 a {
