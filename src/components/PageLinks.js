@@ -1,3 +1,4 @@
+import { FaArrowRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 
