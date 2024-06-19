@@ -1,22 +1,26 @@
+import { useState } from "react";
 import Logo from "./Logo";
 import PageLinks from "./PageLinks";
-import { FaArrowRight, FaBars } from "react-icons/fa6";
+import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
+const [menuState, setMenuState] = useState("")
+const handleMenuState = () => {
+  if(menuState.length > 0) {
+    setMenuState("");
+  } else {
+    setMenuState("active");
+  }
+};
+
   return (
     <nav>
       <Logo />
       <div className="nav-right-content">
-      <PageLinks />
-      <div className="join-us">
-        <button>
-          <span>Join Us</span>
-          <FaArrowRight />
-        </button>
+      <PageLinks toggle={menuState}/>
       </div>
-      </div>
-      <div>
-      <FaBars/>
+      <div className="nav-menu-bar">
+      <FaBars onClick={handleMenuState}/>
       </div>
     </nav>
   );

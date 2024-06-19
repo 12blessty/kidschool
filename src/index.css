@@ -45,59 +45,84 @@ div.logo {
 
 div.page-header nav {
   display: grid;
-  grid-template-columns:  150px 1fr;
+  grid-template-columns: 150px 1fr auto;
   padding: 15px 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 68px;
 }
 
-div.page-header nav .nav-right-content {
-  display: none;
-}
-
-div.page-header nav div:last-child {
-  margin-left: auto;
+div.nav-menu-bar {
+  display: flex;
+  align-items: center;
   font-size: 24px;
   color: var(--base-color);
   cursor: pointer;
 }
 
-div.page-header nav div.page-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+div.navlink.mobile {
+  display: block;
+}
 
-  a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px 10px;
+div.navlink.mobile > div {
+  background-color: #103741;
+  padding: 20px 10px;
+  width: 200px;
+  height: calc(100vh-68px);
+  position: absolute;
+  z-index: 10;
+  top :68px;
+  right: -200px;
+  bottom: 0;
 
-    color: var(--base-color);
-    border-radius: 5px 0px;
-  }
-
-  a:hover {
-    background-color: rgba(220, 220, 220, 0.5);
+  section.join-us {
+    margin-left: 20px;
+    margin-top: 40px;
   }
 }
 
-nav div.join-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+div.navlink.mobile.active > div {
+  right: 0;
+  animation: showNavMenu 0.5s ease-in forwards;
+}
 
+a {
+  text-decoration: none;
+  color: var(--base-color);
+  display: block;
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+a:hover {
+  background-color: rgba(220, 220, 0.5);
+}
+
+div.navlink.desktop {
+  display: none;
+}
+
+div.navlink.desktop > div {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+
+  section:first-child {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+nav section.join-us {
   button {
     padding: 8px 15px;
     display: flex;
     align-items: center;
-    gap: 5px;
     background-color: var(--base-color);
     border: none;
     color: #fff;
     border-radius: 15px;
+    font-size: 18px;
   }
 }
-
 .swiper {
   height: 400px;
 }
@@ -548,11 +573,19 @@ div.copyright {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  div.page-header nav .nav-right-content {
+  div.navlink.desktop {
     display: block;
   }
 
-  div.page-header nav div:last-child {
+  a {
+    display: inline-block;
+  }
+
+  div.nav-menu-bar svg {
+    display: none;
+  }
+
+  div.navlink.mobile {
     display: none;
   }
 }
