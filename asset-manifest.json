@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kidschool/static/css/main.09b61916.css",
+    "main.css": "/kidschool/static/css/main.174012d0.css",
     "main.js": "/kidschool/static/js/main.b6da1f55.js",
     "static/media/carousel-4.jpg": "/kidschool/static/media/carousel-4.a6b9b13c2282bf403f7d.jpg",
     "static/media/carousel-3.jpg": "/kidschool/static/media/carousel-3.294e123da6942a67e4e6.jpg",
@@ -19,11 +19,11 @@
     "static/media/classes-2.jpg": "/kidschool/static/media/classes-2.9d8fd088aff6ccfde321.jpg",
     "static/media/classes-6.jpg": "/kidschool/static/media/classes-6.20fe49330302dfd5bf67.jpg",
     "index.html": "/kidschool/index.html",
-    "main.09b61916.css.map": "/kidschool/static/css/main.09b61916.css.map",
+    "main.174012d0.css.map": "/kidschool/static/css/main.174012d0.css.map",
     "main.b6da1f55.js.map": "/kidschool/static/js/main.b6da1f55.js.map"
   },
   "entrypoints": [
-    "static/css/main.09b61916.css",
+    "static/css/main.174012d0.css",
     "static/js/main.b6da1f55.js"
   ]
 }
